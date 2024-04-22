@@ -6,6 +6,9 @@ const config: Config = {
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  daisyui: {
+    themes: ["winter", "dracula"],
+  },
   theme: {
     extend: {
       backgroundImage: {
@@ -15,6 +18,7 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+
+  plugins: [require("@tailwindcss/typography"), require("daisyui")],
 };
 export default config;
